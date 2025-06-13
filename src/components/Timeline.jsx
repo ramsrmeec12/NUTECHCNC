@@ -60,8 +60,8 @@ const OurApproach = () => {
             <div className="absolute left-[0px] top-1 w-15 h-20 rounded-full overflow-hidden ring-4 ring-yellow-400 bg-white">
               <img src={step.image} alt={step.title} className="object-cover w-full h-full" />
             </div>
-            <h3 className="text-xl pl-52 font-bold text-gray-900">{step.phase} - {step.title}</h3>
-            <p className="text-gray-700 pl-52 mt-1">{step.description}</p>
+            <h3 className="text-xl pl-36 font-bold text-gray-900">{step.phase} - {step.title}</h3>
+            <p className="text-gray-700 pl-36 mt-1">{step.description}</p>
             
           </div>
         ))}
