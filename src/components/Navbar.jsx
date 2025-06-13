@@ -24,6 +24,9 @@ function Navbar() {
           <a href="#products" className="hover:text-yellow-600">Products</a>
           <a href="#credentials" className="hover:text-yellow-600">Credentials</a>
           <a href="#contact" className="hover:text-yellow-600">Contact Us</a>
+          <a href="#contact" className="hover:text-yellow-600">Management Team</a>
+          <a href="#contact" className="hover:text-yellow-600">Infrastructure</a>
+          <a href="#contact" className="hover:text-yellow-600">Quality</a>
         </div>
 
         <div className="hidden md:block">

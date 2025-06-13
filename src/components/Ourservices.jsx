@@ -1,10 +1,16 @@
 import React from 'react';
 import serviceIcon from '../assets/navbarimg/LOGO.jpg'; // Placeholder image
+import img1 from '../assets/OurServices/899692934ContractCNCProgrammer.webp'
+import img2 from '../assets/OurServices/img2.jpeg'
+import img3 from '../assets/OurServices/img3.webp'
+import img4 from '../assets/OurServices/img4.webp'
+import img5 from '../assets/OurServices/img5.jpg'
+import img6 from '../assets/OurServices/img6.jpeg'
 
 const services = [
   {
     title: 'New Product Design (NPD)',
-    image: serviceIcon,
+    image: img1,
     items: [
       'Concept Sketches & Ideation',
       '3D Modeling & CAD',
@@ -15,7 +21,7 @@ const services = [
   },
   {
     title: '3D Printing',
-    image: serviceIcon,
+    image: img2,
     items: [
       'FDM, SLA, SLS Printing',
       'Functional Prototypes',
@@ -26,7 +32,7 @@ const services = [
   },
   {
     title: 'Mould Design',
-    image: serviceIcon,
+    image: img3,
     items: [
       'Injection Mould Design',
       'Blow Mould Design',
@@ -37,7 +43,7 @@ const services = [
   },
   {
     title: 'Mould Manufacturing',
-    image: serviceIcon,
+    image: img4,
     items: [
       'Precision Machining',
       'CNC EDM & Wirecut',
@@ -48,7 +54,7 @@ const services = [
   },
   {
     title: 'CNC Machining',
-    image: serviceIcon,
+    image: img5,
     items: [
       'Plastic & Metal Parts',
       '3-Axis/5-Axis Machining',
@@ -59,7 +65,7 @@ const services = [
   },
   {
     title: 'Plastic Injection Moulding',
-    image: serviceIcon,
+    image: img6,
     items: [
       'High-Volume Production',
       'ABS, PP, PC, Nylon, etc.',
@@ -84,10 +90,10 @@ const Services = () => {
             key={index}
             className="flex flex-col items-center w-full sm:w-[48%] md:w-[30%] bg-white shadow-sm rounded-md p-4"
           >
-            <div className="bg-yellow-500 rounded-full p-4 w-24 h-24 flex items-center justify-center mb-3">
-              <img src={service.image} alt={service.title} className="w-10 h-10 object-contain" />
+            <div className="bg-yellow-500 rounded-full  flex items-center justify-center mb-3">
+              <img src={service.image} alt={service.title} className="rounded-md w-42 h-20 object-contain" />
             </div>
-            <h3 className="text-lg font-semibold text-gray-900 mb-2">{service.title}</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-2">{service.title}</h3>
             <ul className="text-sm text-gray-600 text-left space-y-1">
               {service.items.map((item, i) => (
                 <li key={i}>• {item}</li>

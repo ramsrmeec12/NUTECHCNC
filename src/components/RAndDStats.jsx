@@ -1,4 +1,4 @@
-import { FaListUl, FaCogs, FaCertificate } from "react-icons/fa";
+import { FaListUl, FaCogs, FaCertificate, FaBusinessTime } from "react-icons/fa";
 import { MdVerified } from "react-icons/md";
 
 const RAndDStats = () => {
@@ -37,10 +37,10 @@ const RAndDStats = () => {
 
         <div className="flex flex-col items-center border-t-4 border-gray-300 pt-4">
           <div className="text-yellow-500 font-semibold flex items-center gap-2 mb-1">
-            <MdVerified className="text-xl" />
-            <span>Patents</span>
+            <FaBusinessTime className="text-xl" />
+            <span>Clients</span>
           </div>
-          <div className="text-3xl font-bold text-gray-900">30</div>
+          <div className="text-3xl font-bold text-gray-900">100+</div>
         </div>
 
         <div className="flex flex-col items-center border-t-4 border-gray-300 pt-4">
@@ -48,7 +48,7 @@ const RAndDStats = () => {
             <FaCertificate className="text-xl" />
             <span>Certifications</span>
           </div>
-          <div className="text-3xl font-bold text-gray-900">100</div>
+          <div className="text-3xl font-bold text-gray-900">10+</div>
         </div>
       </div>
     </div>
