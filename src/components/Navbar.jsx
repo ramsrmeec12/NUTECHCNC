@@ -44,13 +44,18 @@ function Navbar() {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-black bg-opacity-90 text-white px-6 py-4 space-y-2">
-          <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
-          <a href="#products" onClick={() => setMenuOpen(false)}>Products</a>
-          <a href="#credentials" onClick={() => setMenuOpen(false)}>Credentials</a>
-          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact Us</a>
+        <div className="md:hidden bg-black bg-opacity-90 text-white px-6 py-4">
+          <a href="/" onClick={() => setMenuOpen(false)} className="block py-2">Home</a>
+          <a href="#products" onClick={() => setMenuOpen(false)} className="block py-2">Products</a>
+          <a href="#credentials" onClick={() => setMenuOpen(false)} className="block py-2">Credentials</a>
+          <a href="#contact" onClick={() => setMenuOpen(false)} className="block py-2">Contact Us</a>
+          <a href="#management" onClick={() => setMenuOpen(false)} className="block py-2">Management Team</a>
+          <a href="#infrastructure" onClick={() => setMenuOpen(false)} className="block py-2">Infrastructure</a>
+          <a href="#quality" onClick={() => setMenuOpen(false)} className="block py-2">Quality</a>
+          <button className="mt-4 block w-full bg-white text-black py-2 rounded hover:bg-gray-200" onClick={() => setMenuOpen(false)}>Login</button>
         </div>
       )}
+
     </div>
   );
 }
