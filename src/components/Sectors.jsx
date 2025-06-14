@@ -37,7 +37,7 @@ const SectorsWeServe = () => {
   return (
     <div className="bg-gray-100 py-12 px-6 md:px-20">
       <h2 className="text-3xl font-bold text-center text-gray-900 mb-2">Sectors We Serve</h2>
-      <div className="border-t-4 border-yellow-500 w-16 mx-auto mb-10"></div>
+      <div className="border-t-4  border-yellow-500 w-16 mx-auto mb-10"></div>
 
       <div className="grid md:grid-cols-3 gap-6">
         {sectors.map((sector, index) => (

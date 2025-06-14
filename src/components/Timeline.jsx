@@ -53,6 +53,7 @@ const OurApproach = () => {
     <div className='bg-gray-100'>
 <div className="relative  py-12 px-4 sm:px-8 max-w-4xl mx-auto">
       <h2 className="text-3xl font-bold text-center mb-2">OUR APPROACH</h2>
+      <div className="border-t-4 border-yellow-500 w-16 mb-6 mx-auto"></div>
       <p className="text-center italic text-gray-600 mb-10">Phases of our projects</p>
 
       <div className="border-l-4 border-yellow-400 ml-6 ">

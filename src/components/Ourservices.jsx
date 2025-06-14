@@ -80,6 +80,7 @@ const Services = () => {
   return (
     <div className="text-center py-10 px-4 md:px-8 bg-gray-100 mb-10">
       <h2 className="text-3xl font-bold text-gray-900 mb-2">OUR SERVICES</h2>
+      <div className="border-t-4 border-yellow-500 w-16 mb-6 mx-auto"></div>
       <p className="italic text-gray-600 mb-8 max-w-3xl mx-auto">
         We specialize in delivering end-to-end product development services from ideation to production, ensuring precision and quality at every stage.
       </p>

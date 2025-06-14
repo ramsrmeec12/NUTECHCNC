@@ -5,6 +5,7 @@ const RAndDStats = () => {
     <div className="text-center py-12 px-4 md:px-16 bg-white">
       {/* Heading & Description */}
       <h2 className="text-3xl font-bold text-gray-900 mb-2">R&D</h2>
+      <div className="border-t-4 border-yellow-500 w-16 mb-6 mx-auto"></div>
       <p className="italic text-gray-600 mb-8 max-w-3xl mx-auto">
         Through relentless research and development, NUTECH is shaping its present and future as a leader in innovative solutions.
       </p>
