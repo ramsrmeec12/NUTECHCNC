@@ -21,21 +21,20 @@ const clients = [
 
 const Clients = () => {
   return (
-    <div className="bg-white py-10 px-6">
-      <h2 className="text-center text-3xl font-bold mb-8 text-gray-900">Our Clients</h2>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-items-center">
-        {clients.map((client, index) => (
-          <div
-            key={index}
-            className="bg-gray-100 p-4 rounded-lg shadow-sm w-full h-28 flex items-center justify-center"
-          >
-            <img
-              src={client.logo}
-              alt={client.name}
-              className="max-h-16 object-contain"
-            />
-          </div>
-        ))}
+    <div className="bg-white py-10 overflow-hidden relative">
+      <h2 className="text-center text-3xl font-bold mb-6 text-gray-900">Our Clients</h2>
+      <div className="whitespace-nowrap overflow-hidden relative">
+        <div className="animate-marquee flex space-x-12">
+          {[...clients, ...clients].map((client, index) => (
+            <div key={index} className="flex items-center justify-center w-40 h-20">
+              <img
+                src={client.logo}
+                alt={client.name}
+                className="max-h-16 object-contain grayscale hover:grayscale-0 transition duration-300"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

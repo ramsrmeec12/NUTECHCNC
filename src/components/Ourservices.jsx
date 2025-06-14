@@ -78,7 +78,7 @@ const services = [
 
 const Services = () => {
   return (
-    <div className="text-center py-10 px-4 md:px-8 bg-white mb-10">
+    <div className="text-center py-10 px-4 md:px-8 bg-gray-100 mb-10">
       <h2 className="text-3xl font-bold text-gray-900 mb-2">OUR SERVICES</h2>
       <p className="italic text-gray-600 mb-8 max-w-3xl mx-auto">
         We specialize in delivering end-to-end product development services from ideation to production, ensuring precision and quality at every stage.
@@ -88,7 +88,7 @@ const Services = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="flex flex-col items-center w-full sm:w-[48%] md:w-[30%] bg-white shadow-sm rounded-md p-4"
+            className="flex rounded-2xl flex-col items-center w-full sm:w-[48%] md:w-[30%] bg-white shadow-sm rounded-md p-4"
           >
             <div className="bg-yellow-500 rounded-full  flex items-center justify-center mb-3">
               <img src={service.image} alt={service.title} className="rounded-md w-42 h-20 object-contain" />

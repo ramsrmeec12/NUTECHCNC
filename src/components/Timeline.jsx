@@ -8,9 +8,9 @@ import img5 from '../assets/timeline/img5.jpg'
 const approachSteps = [
   {
     phase: 'Phase 1',
-    title: 'Conceptualisation',
+    title: 'Ideation & Requirement Analysis',
     description:
-      'Creation of concept sketches and drawings based on your requirements. Usually 2 to 3 concept designs will be made, if required.',
+      'Brainstorming and sketching multiple initial concepts based on client requirements, ensuring functionality and design direction.',
     estimate: 'Estimated time: 1 to 3 days',
     image: img1,
   },
@@ -18,31 +18,31 @@ const approachSteps = [
     phase: 'Phase 2',
     title: 'Design for Manufacturing (DFM)',
     description:
-      'Actual 3D drawings based on the concept design considering the manufacturing methods and production feasibility.',
+      'Detailed 3D CAD models optimized for manufacturability, cost-efficiency, and production constraints, ensuring production feasibility.',
     estimate: 'Estimated time: 1 to 3 days',
     image: img2,
   },
   {
     phase: 'Phase 3',
-    title: 'Prototyping',
+    title: 'Prototype Development',
     description:
-      '3D printing or machining will be done initially and validation of fitments and mechanisms will be done and low volume production can be done.',
+      'Building functional prototypes using 3D printing or CNC machining to validate design, fit, and functionality before final tooling.',
     estimate: 'Estimated time: 5 to 10 days',
-    image:img3,
+    image: img3,
   },
   {
     phase: 'Phase 4',
-    title: 'Mould Making',
+    title: 'Tooling & Mould Fabrication',
     description:
-      'Based on the projects, we will do the production through trending economic manufacturing technologies to achieve the production in a short lead time with quality.',
+      'Custom moulds and tools are manufactured using advanced machining processes to prepare for mass production.',
     estimate: 'Estimated time: 15 to 30 days',
     image: img4,
   },
   {
     phase: 'Phase 5',
-    title: 'Production',
+    title: 'Mass Production & Quality Assurance',
     description:
-      'Based on the projects, we will do the production through trending economic manufacturing technologies to achieve the production in a short lead time with quality.',
+      'Full-scale production begins with rigorous quality control, ensuring consistency, durability, and timely delivery.',
     estimate: 'Estimated time: 15 to 30 days',
     image: img5,
   },
@@ -50,7 +50,8 @@ const approachSteps = [
 
 const OurApproach = () => {
   return (
-    <div className="relative bg-white py-12 px-4 sm:px-8 max-w-4xl mx-auto">
+    <div className='bg-gray-100'>
+<div className="relative  py-12 px-4 sm:px-8 max-w-4xl mx-auto">
       <h2 className="text-3xl font-bold text-center mb-2">OUR APPROACH</h2>
       <p className="text-center italic text-gray-600 mb-10">Phases of our projects</p>
 
@@ -73,6 +74,8 @@ const OurApproach = () => {
         </div>
       </div>
     </div>
+    </div>
+    
   );
 };
 

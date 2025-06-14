@@ -2,41 +2,35 @@ import { useState, useEffect } from 'react';
 import logo from '../assets/navbarimg/LOGO.jpg';
 import { Link } from 'react-router-dom';
 
-function Navbar() {
+function Navbar2() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isSticky, setIsSticky] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsSticky(window.scrollY > 300); // adjust if needed
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+
+  
 
   return (
-    <div className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isSticky ? 'bg-white shadow-md' : 'bg-transparent'}`}>
+    <div className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white`}>
       <div className="flex items-center justify-between px-8 py-4">
         <Link to="/"><img src={logo} alt="Logo" className="h-14" /></Link>
 
-        <div className={`hidden md:flex space-x-8 text-lg font-medium ${isSticky ? 'text-black' : 'text-white'}`}>
-          <a href="/aboutus" className="hover:text-yellow-600">About Us</a>
-          <a href="#products" className="hover:text-yellow-600">Products</a>
-          <a href="#credentials" className="hover:text-yellow-600">Credentials</a>
+        <div className={`hidden md:flex space-x-8 text-lg font-medium text-black`}>
+          <a href="/" className="hover:text-yellow-600">Home</a>
+          <a href="/products" className="hover:text-yellow-600">Products</a>
+          <a href="/credentials" className="hover:text-yellow-600">Credentials</a>
           <a href="/contact" className="hover:text-yellow-600">Contact Us</a>
-          <a href="#contact" className="hover:text-yellow-600">Management Team</a>
-          <a href="#contact" className="hover:text-yellow-600">Infrastructure</a>
-          <a href="#contact" className="hover:text-yellow-600">Quality</a>
+          <a href="/team" className="hover:text-yellow-600">Management Team</a>
+          <a href="/infrastructure" className="hover:text-yellow-600">Infrastructure</a>
+          <a href="/quality" className="hover:text-yellow-600">Quality</a>
         </div>
 
         <div className="hidden md:block">
-          <button className={`${isSticky ? 'bg-black text-white' : 'bg-white text-black'} px-4 py-1 rounded hover:bg-gray-200`}>
+          <button className={`bg-black text-white } px-4 py-1 rounded hover:bg-gray-200`}>
             Login
           </button>
         </div>
 
         <div className="md:hidden">
-          <button onClick={() => setMenuOpen(!menuOpen)} className={`text-3xl focus:outline-none ${isSticky ? 'text-black' : 'text-white'}`}>
+          <button onClick={() => setMenuOpen(!menuOpen)} className={`text-3xl focus:outline-none text-black`}>
             ☰
           </button>
         </div>
@@ -60,4 +54,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Navbar2;

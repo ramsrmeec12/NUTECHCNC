@@ -1,5 +1,4 @@
-import { FaListUl, FaCogs, FaCertificate, FaBusinessTime } from "react-icons/fa";
-import { MdVerified } from "react-icons/md";
+import { FaListUl, FaGlobe, FaFlag, FaCheckCircle } from "react-icons/fa";
 
 const RAndDStats = () => {
   return (
@@ -7,7 +6,7 @@ const RAndDStats = () => {
       {/* Heading & Description */}
       <h2 className="text-3xl font-bold text-gray-900 mb-2">R&D</h2>
       <p className="italic text-gray-600 mb-8 max-w-3xl mx-auto">
-        Through relentless research and development, DESCO is shaping its present and future as a leader in innovative solutions.
+        Through relentless research and development, NUTECH is shaping its present and future as a leader in innovative solutions.
       </p>
 
       {/* Learn More Button */}
@@ -29,26 +28,26 @@ const RAndDStats = () => {
 
         <div className="flex flex-col items-center border-t-4 border-gray-300 pt-4">
           <div className="text-yellow-500 font-semibold flex items-center gap-2 mb-1">
-            <FaCogs className="text-xl" />
-            <span>OEM Specs</span>
-          </div>
-          <div className="text-3xl font-bold text-gray-900">65</div>
-        </div>
-
-        <div className="flex flex-col items-center border-t-4 border-gray-300 pt-4">
-          <div className="text-yellow-500 font-semibold flex items-center gap-2 mb-1">
-            <FaBusinessTime className="text-xl" />
-            <span>Clients</span>
+            <FaGlobe className="text-xl" />
+            <span>Customers Globally</span>
           </div>
           <div className="text-3xl font-bold text-gray-900">100+</div>
         </div>
 
         <div className="flex flex-col items-center border-t-4 border-gray-300 pt-4">
           <div className="text-yellow-500 font-semibold flex items-center gap-2 mb-1">
-            <FaCertificate className="text-xl" />
-            <span>Certifications</span>
+            <FaFlag className="text-xl" />
+            <span>Countries Serving</span>
           </div>
           <div className="text-3xl font-bold text-gray-900">10+</div>
+        </div>
+
+        <div className="flex flex-col items-center border-t-4 border-gray-300 pt-4">
+          <div className="text-yellow-500 font-semibold flex items-center gap-2 mb-1">
+            <FaCheckCircle className="text-xl" />
+            <span>Successful Projects</span>
+          </div>
+          <div className="text-3xl font-bold text-gray-900">1000+</div>
         </div>
       </div>
     </div>
