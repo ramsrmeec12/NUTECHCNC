@@ -27,9 +27,7 @@ const BlogPage = () => {
 
   return (
     <div>
-      <div>
-        <Navbar2 />
-      </div>
+      <Navbar2 />
 
       <div className="px-6 py-10 pt-28">
         <h2 className="text-3xl font-bold mb-6 text-center">📝 Blog Posts</h2>
@@ -55,15 +53,8 @@ const BlogPage = () => {
               >
                 <h4 className="text-xl font-semibold">{blog.title}</h4>
                 <p className="text-gray-600 line-clamp-2">{blog.content}</p>
-                {blog.imageURL && (
-                  <img
-                    src={blog.imageURL}
-                    alt="Blog"
-                    className="h-40 w-full object-cover mt-2 rounded"
-                  />
-                )}
 
-                {/* Show delete button only if current user is the author */}
+                {/* Delete button */}
                 {auth.currentUser?.email === blog.author && (
                   <button
                     className="absolute top-2 right-2 text-red-600 bg-white border border-red-600 px-2 py-1 rounded hover:bg-red-600 hover:text-white"
@@ -97,7 +88,7 @@ const BlogPage = () => {
                 ×
               </button>
 
-              {/* Optional delete in modal */}
+              {/* Delete inside modal */}
               {auth.currentUser?.email === selectedBlog.author && (
                 <button
                   className="absolute top-2 left-3 text-red-600 text-sm px-3 py-1 border border-red-600 rounded hover:bg-red-600 hover:text-white"
@@ -109,9 +100,6 @@ const BlogPage = () => {
 
               <h3 className="text-2xl font-bold mb-2">{selectedBlog.title}</h3>
               <p className="text-gray-700 mb-4">{selectedBlog.content}</p>
-              {selectedBlog.imageURL && (
-                <img src={selectedBlog.imageURL} alt="Blog" className="rounded" />
-              )}
               <div className="text-sm text-gray-500 mt-4">By: {selectedBlog.author}</div>
             </div>
           </div>

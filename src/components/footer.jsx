@@ -47,7 +47,12 @@ const Footer = () => {
         {/* Contact Info */}
         <div>
           <h3 className="text-xl font-semibold mb-4 text-yellow-300">Contact</h3>
-          <p className="text-gray-200">📍 Chennai, India</p>
+          <p className="text-gray-200">📍
+
+          
+            No. 162 Munusamy Street, 3rd Main Rd, Vanagaram, Chennai, Tamil Nadu 600058
+
+          </p>
           <p className="text-gray-200">📞 +91 98765 43210</p>
           <p className="text-gray-200">✉️ info@desco.com</p>
           <div className="flex space-x-4 mt-4">
