@@ -1,35 +1,49 @@
-import { FaIndustry, FaCarSide, FaStethoscope, FaShieldAlt, FaPlane, FaMobileAlt } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+import {
+  FaCarSide,
+  FaBolt,
+  FaBuilding,
+  FaShoppingCart,
+  FaShoePrints,
+  FaStethoscope,
+} from 'react-icons/fa';
 
 const sectors = [
   {
-    icon: <FaPlane className="text-white text-xl" />,
-    title: "Aerospace",
-    desc: "NUTECH is a leading Aerospace components manufacturer & supplier.",
-  },
-  {
     icon: <FaCarSide className="text-white text-xl" />,
-    title: "Automotive",
-    desc: "Critical parts for the automotive industry across wide applications.",
+    title: "Automobiles",
+    slug: "automobiles",
+    desc: "Precision components and assemblies tailored for the automobile industry.",
   },
   {
-    icon: <FaMobileAlt className="text-white text-xl" />,
-    title: "Consumer",
-    desc: "Custom engineered plastic and metal components for consumer goods.",
+    icon: <FaBolt className="text-white text-xl" />,
+    title: "Electrical & Electronics",
+    slug: "electrical-and-electronics",
+    desc: "Advanced solutions for electrical systems and electronic assemblies.",
   },
   {
-    icon: <FaShieldAlt className="text-white text-xl" />,
-    title: "Defence",
-    desc: "Trusted global supplier of precision defence components.",
+    icon: <FaBuilding className="text-white text-xl" />,
+    title: "Construction",
+    slug: "construction",
+    desc: "Durable parts and systems to support modern construction projects.",
   },
   {
-    icon: <FaIndustry className="text-white text-xl" />,
-    title: "Industrial",
-    desc: "End-to-end solutions for complex industrial component needs.",
+    icon: <FaShoppingCart className="text-white text-xl" />,
+    title: "FMCG",
+    slug: "fmcg",
+    desc: "High-volume, quality components for fast-moving consumer goods.",
+  },
+  {
+    icon: <FaShoePrints className="text-white text-xl" />,
+    title: "Footwear",
+    slug: "footwear",
+    desc: "Customized plastic and metal parts for the footwear manufacturing sector.",
   },
   {
     icon: <FaStethoscope className="text-white text-xl" />,
-    title: "Medical",
-    desc: "Precision-engineered parts for reliable medical devices.",
+    title: "Medical & Pharmaceutical",
+    slug: "medical-and-pharmaceutical",
+    desc: "Reliable and safe components for medical devices and pharmaceutical tools.",
   },
 ];
 
@@ -37,7 +51,7 @@ const SectorsWeServe = () => {
   return (
     <div className="bg-gray-100 py-12 px-6 md:px-20">
       <h2 className="text-3xl font-bold text-center text-gray-900 mb-2">Sectors We Serve</h2>
-      <div className="border-t-4  border-yellow-500 w-16 mx-auto mb-10"></div>
+      <div className="border-t-4 border-yellow-500 w-16 mx-auto mb-10"></div>
 
       <div className="grid md:grid-cols-3 gap-6">
         {sectors.map((sector, index) => (
@@ -47,9 +61,12 @@ const SectorsWeServe = () => {
             </div>
             <h3 className="text-lg font-semibold text-gray-800 mb-2">{sector.title}</h3>
             <p className="text-gray-600 text-sm">{sector.desc}</p>
-            <a href="#" className="text-blue-600 font-medium text-sm mt-2 inline-block hover:underline">
+            <Link
+              to={`/products/${sector.slug}`}
+              className="text-blue-600 font-medium text-sm mt-2 inline-block hover:underline"
+            >
               Learn More
-            </a>
+            </Link>
           </div>
         ))}
       </div>

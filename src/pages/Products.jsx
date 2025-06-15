@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import Navbar2 from '../components/Navbar2';
 
 import Automobile1 from '../assets/products/Automobile/Automobile1.jpg';
@@ -339,6 +339,10 @@ const ProductListing = () => {
     const [openIndex, setOpenIndex] = useState(null);
     const [selectedImage, setSelectedImage] = useState(null);
 
+    useEffect(() => {
+        document.title = "Plastic Product Sectors | Your Company Name"; // 🔁 Replace with actual brand name
+    }, []);
+
     const handleImageClick = (img) => {
         setSelectedImage(img);
     };
@@ -349,9 +353,11 @@ const ProductListing = () => {
 
     return (
         <div>
-            <Navbar2></Navbar2>
-            <div className="bg-white px-6 py-12 max-w-6xl mx-auto">
-                <h2 className="text-3xl font-bold text-center mb-6">Our Plastic Product Sectors</h2>
+            <Navbar2 />
+            <div className="bg-white px-6 py-12 max-w-6xl mx-auto pt-24">
+                <h2 className="text-3xl font-bold text-center mb-2">Our Plastic Product Sectors</h2>
+               
+      <div className="border-t-4 border-yellow-500 w-24 mb-6 mx-auto"></div>
 
                 {sectors.map((sector, index) => (
                     <div key={index} className="mb-4 border border-gray-200 rounded-lg shadow">
@@ -390,7 +396,7 @@ const ProductListing = () => {
                     >
                         <div
                             className="relative"
-                            onClick={(e) => e.stopPropagation()} // prevent closing when clicking on the image
+                            onClick={(e) => e.stopPropagation()}
                         >
                             <img
                                 src={selectedImage}
@@ -408,7 +414,6 @@ const ProductListing = () => {
                 )}
             </div>
         </div>
-
     );
 };
 
