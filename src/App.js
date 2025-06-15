@@ -5,6 +5,7 @@ import AboutUsPage from "./pages/Aboutus"
 import Footer from "./components/footer"
 import ManagementTeam from "./pages/managementteam"
 import InfrastructureSection from "./pages/Infrastructure"
+import ProductListing from "./pages/Products"
 function App() {
   return (<BrowserRouter>
   
@@ -14,6 +15,7 @@ function App() {
       <Route path="/aboutus" element={<AboutUsPage></AboutUsPage>}></Route>
       <Route path="/team" element={<ManagementTeam></ManagementTeam>}></Route>
       <Route path="/infrastructure" element={<InfrastructureSection></InfrastructureSection>}></Route>
+      <Route path="/products" element={<ProductListing></ProductListing>}></Route>
     </Routes>
     <Footer></Footer>
   </BrowserRouter>)

@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import Services from "../components/Ourservices";
-import img1 from '../assets/navbarimg/homepage.png';
+import img1 from '../assets/navbarimg/homepage.jpg';
 import RAndDStats from "../components/RAndDStats";
 import OurApproach from "../components/Timeline";
 import Clients from "../components/Ourclients";
@@ -20,7 +20,7 @@ function Home() {
         style={{ backgroundImage: `url(${img1})` }}
       >
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center px-4">
-          <h1 className="text-black text-3xl md:text-5xl font-bold drop-shadow-lg font-poppins">
+          <h1 className="text-white text-3xl md:text-5xl font-bold drop-shadow-lg font-poppins">
             From Design to Production
           </h1>
           <h1 className="text-white text-3xl md:text-5xl font-bold drop-shadow-lg font-poppins">

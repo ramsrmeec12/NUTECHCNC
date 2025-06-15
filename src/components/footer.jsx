@@ -64,13 +64,13 @@ const Footer = () => {
         href="https://wa.me/919025416751"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-10 right-20 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300"
+        className="fixed bottom-10 right-10 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300"
       >
         <FaWhatsapp size={28} />
       </a>
 
       {/* Copyright */}
-      <div className="relative z-10 text-center text-sm text-black mt-6">
+      <div className="relative z-10 text-center text-sm text-black mt-6 font-bold">
         © {new Date().getFullYear()} NUTECH CNC PRIVATE LIMITED. All rights reserved.
         <h1>Brought to you by PEACE MEDIA COMPANY.</h1>
       </div>
