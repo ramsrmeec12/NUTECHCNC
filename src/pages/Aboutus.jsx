@@ -7,7 +7,7 @@ const AboutUsPage = () => {
         <div>
             <Navbar2></Navbar2>
             <div className='pt-20'>
-                <h1 className='pt-10 pl-20 font-bold text-4xl'>#1 TAMILNADU'S PLASTIC INJECTION MOLDING COMPANY</h1>
+                <h1 className='pt-10 pl-20 font-bold text-4xl'>#1 TAMILNADU'S PLASTIC INJECTION MOULDING COMPANY</h1>
                 <AboutUs ></AboutUs>
                 <div className="bg-gray-50 px-6 md:px-20 py-12 text-gray-800">
                 <h1 className="text-3xl font-bold mb-6 text-black">MOLDING COMPANY</h1>

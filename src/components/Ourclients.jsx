@@ -1,4 +1,3 @@
-import React from 'react';
 import client1 from '../assets/Ourclients/client1.jpg';
 import client2 from '../assets/Ourclients/client2.jpg';
 import client3 from '../assets/Ourclients/client3.jpg';

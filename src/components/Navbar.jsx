@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import logo from '../assets/navbarimg/LOGO.jpg';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,17 +23,17 @@ function Navbar() {
 
         <div className={`hidden md:flex space-x-8 text-lg font-medium ${isSticky ? 'text-black' : 'text-white'}`}>
           <a href="/aboutus" className="hover:text-yellow-600">About Us</a>
-          <a href="#products" className="hover:text-yellow-600">Products</a>
-          <a href="#credentials" className="hover:text-yellow-600">Credentials</a>
+          <a href="/products" className="hover:text-yellow-600">Products</a>
+          <a href="/credentials" className="hover:text-yellow-600">Credentials</a>
           <a href="/contact" className="hover:text-yellow-600">Contact Us</a>
-          <a href="#contact" className="hover:text-yellow-600">Management Team</a>
+          <a href="/team" className="hover:text-yellow-600">Management Team</a>
           <a href="/infrastructure" className="hover:text-yellow-600">Infrastructure</a>
-          <a href="#contact" className="hover:text-yellow-600">Quality</a>
+          <a href="/quality" className="hover:text-yellow-600">Quality</a>
         </div>
 
         <div className="hidden md:block">
-          <button className={`${isSticky ? 'bg-black text-white' : 'bg-white text-black'} px-4 py-1 rounded hover:bg-gray-200`}>
-            Login
+          <button onClick={() => navigate('/blog')} className={`${isSticky ? 'bg-black text-white' : 'bg-white text-black'} px-4 py-1 rounded hover:bg-gray-200`}>
+            Blogs
           </button>
         </div>
 
@@ -52,7 +54,7 @@ function Navbar() {
           <a href="#management" onClick={() => setMenuOpen(false)} className="block py-2">Management Team</a>
           <a href="#infrastructure" onClick={() => setMenuOpen(false)} className="block py-2">Infrastructure</a>
           <a href="#quality" onClick={() => setMenuOpen(false)} className="block py-2">Quality</a>
-          <button className="mt-4 block w-full bg-white text-black py-2 rounded hover:bg-gray-200" onClick={() => setMenuOpen(false)}>Login</button>
+          <button className="mt-4 block w-full bg-white text-black py-2 rounded hover:bg-gray-200" onClick={() => setMenuOpen(false)}>Blogs</button>
         </div>
       )}
 

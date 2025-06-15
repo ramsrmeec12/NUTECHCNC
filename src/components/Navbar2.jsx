@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
 import logo from '../assets/navbarimg/LOGO.jpg';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Navbar2() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate()
 
 
-  
+
 
   return (
     <div className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white`}>
@@ -24,10 +26,11 @@ function Navbar2() {
         </div>
 
         <div className="hidden md:block">
-          <button className={`bg-black text-white } px-4 py-1 rounded hover:bg-gray-200`}>
-            Login
+          <button onClick={() => navigate('/blog')} className={`bg-black text-white px-4 py-1 rounded hover:bg-yellow-600`}>
+            Blogs
           </button>
         </div>
+
 
         <div className="md:hidden">
           <button onClick={() => setMenuOpen(!menuOpen)} className={`text-3xl focus:outline-none text-black`}>
