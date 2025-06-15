@@ -62,11 +62,12 @@ const SectorsWeServe = () => {
             <h3 className="text-lg font-semibold text-gray-800 mb-2">{sector.title}</h3>
             <p className="text-gray-600 text-sm">{sector.desc}</p>
             <Link
-              to={`/products/${sector.slug}`}
+              to="/products"
               className="text-blue-600 font-medium text-sm mt-2 inline-block hover:underline"
             >
               Learn More
             </Link>
+
           </div>
         ))}
       </div>

@@ -10,10 +10,12 @@ import Quality from "./pages/quality"
 import BlogPage from "./pages/Blogpage"
 import LoginPage from "./pages/Loginpage"
 import BlogForm from "./components/BlogForm"
+import ScrollToTop from "./components/ScrollToTop"
 function App() {
   return (<BrowserRouter>
-  
+  <ScrollToTop></ScrollToTop>
     <Routes>
+      
       <Route path="/" element={<Home></Home>}></Route>
       <Route path="/contact" element={<Contact></Contact>}></Route>
       <Route path="/aboutus" element={<AboutUsPage></AboutUsPage>}></Route>
