@@ -24,10 +24,10 @@ function Navbar() {
         <div className={`hidden md:flex space-x-8 text-lg font-medium ${isSticky ? 'text-black' : 'text-white'}`}>
           <a href="/aboutus" className="hover:text-yellow-600">About Us</a>
           <a href="/products" className="hover:text-yellow-600">Products</a>
-          <a href="/credentials" className="hover:text-yellow-600">Credentials</a>
           <a href="/contact" className="hover:text-yellow-600">Contact Us</a>
           <a href="/team" className="hover:text-yellow-600">Management Team</a>
           <a href="/infrastructure" className="hover:text-yellow-600">Infrastructure</a>
+          <a href="/credentials" className="hover:text-yellow-600">Credentials</a>
           <a href="/quality" className="hover:text-yellow-600">Quality</a>
         </div>
 
@@ -49,10 +49,11 @@ function Navbar() {
         <div className="md:hidden bg-black bg-opacity-90 text-white px-6 py-4">
           <a href="/" onClick={() => setMenuOpen(false)} className="block py-2">Home</a>
           <a href="/products" onClick={() => setMenuOpen(false)} className="block py-2">Products</a>
-          <a href="/credentials" onClick={() => setMenuOpen(false)} className="block py-2">Credentials</a>
+
           <a href="/contact" onClick={() => setMenuOpen(false)} className="block py-2">Contact Us</a>
           <a href="/team" onClick={() => setMenuOpen(false)} className="block py-2">Management Team</a>
           <a href="/infrastructure" onClick={() => setMenuOpen(false)} className="block py-2">Infrastructure</a>
+                    <a href="/credentials" onClick={() => setMenuOpen(false)} className="block py-2">Credentials</a>
           <a href="/quality" onClick={() => setMenuOpen(false)} className="block py-2">Quality</a>
           <button className="mt-4 block w-full bg-white text-black py-2 rounded hover:bg-gray-200" onClick={() => navigate('/blog')}>Blogs</button>
         </div>
