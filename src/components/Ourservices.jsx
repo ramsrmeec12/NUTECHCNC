@@ -1,5 +1,4 @@
-import React from 'react';
-import serviceIcon from '../assets/navbarimg/LOGO.jpg'; // Placeholder image
+
 import img1 from '../assets/OurServices/899692934ContractCNCProgrammer.webp'
 import img2 from '../assets/OurServices/img2.jpeg'
 import img3 from '../assets/OurServices/img3.webp'

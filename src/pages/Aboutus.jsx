@@ -25,7 +25,7 @@ const AboutUsPage = () => {
                     <div className="md:w-1/2 mb-4 md:mb-0">
                         <h3 className="text-xl font-semibold mb-2">Our Roots</h3>
                         <p className="text-gray-700">
-                            In 1997, IN Technologies India Pvt. Ltd. was founded as a 100% export-oriented unit...
+                            In 2002, NUTECH CNC Pvt. Ltd. was founded as a 100% export-oriented unit...
                         </p>
                     </div>
                     <img
@@ -39,17 +39,17 @@ const AboutUsPage = () => {
                 <section className="space-y-16">
                     {[
                         {
-                            text: "Over the years, INDO-MIM has grown its facilities...",
+                            text: "Over the years, Nutech has grown its facilities...",
                             img: "/images/chikkatirupati.jpg",
                             alt: "Chikkatirupati Unit",
                         },
                         {
-                            text: "INDO-MIM’s largest injection molding facility is located at East Aurora, NY, USA.",
+                            text: "Nutech's largest injection molding facility is located at East Aurora, NY, USA.",
                             img: "/images/texas-plant.jpg",
                             alt: "East Aurora, Texas",
                         },
                         {
-                            text: "INDO-MIM opened another state-of-the-art facility in 2020...",
+                            text: "NUTECH opened another state-of-the-art facility in 2020...",
                             img: "/images/us-plant.jpg",
                             alt: "New Facility USA",
                         },
@@ -72,8 +72,8 @@ const AboutUsPage = () => {
                 <section className="mt-16">
                     <h2 className="text-2xl font-bold mb-4 text-center">NUTECH Historic Timeline</h2>
                     <div className="bg-white p-6 rounded-md shadow-md border-l-4 border-yellow-500">
-                        <h4 className="font-bold text-lg text-gray-800 mb-2">1997</h4>
-                        <p className="text-gray-700">Started with IN Technologies in Bangalore. Export-oriented unit for MIM products.</p>
+                        <h4 className="font-bold text-lg text-gray-800 mb-2">2002</h4>
+                        <p className="text-gray-700">We started with a new plant</p>
                     </div>
                 </section>
             </div>
