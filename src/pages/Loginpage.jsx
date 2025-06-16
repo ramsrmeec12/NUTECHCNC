@@ -23,10 +23,13 @@ function LoginPage() {
     const handleLogout = () => signOut(auth);
 
     return (
-        <div>
-            <Navbar2 />
+        <div className='pt-12'>
+            <div>
+                <Navbar2 />
+            </div>
 
-            <div className="max-w-md mx-auto pt-20 p-6 border mt-10 rounded shadow">
+
+            <div className="max-w-md mx-auto  p-6 border mt-10 rounded shadow ">
                 {user ? (
                     <div className="text-center">
                         <p className="mb-2 text-lg">Welcome, {user.email}</p>
@@ -46,7 +49,7 @@ function LoginPage() {
                     </div>
                 ) : (
                     <form onSubmit={handleLogin}>
-                        <h2 className="text-2xl font-bold mb-4">Login</h2>
+                        <h2 className="text-2xl font-bold mb-4">Login to write BLOGS</h2>
                         <input
                             type="email"
                             placeholder="Email"
