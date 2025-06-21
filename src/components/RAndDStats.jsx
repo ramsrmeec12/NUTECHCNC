@@ -27,10 +27,11 @@ const RAndDStats = () => {
       {/* Stats */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
         {[
+          { icon: <FaCheckCircle />, label: "Successful Projects", value: 1000 },
           { icon: <FaListUl />, label: "Grades", value: 300 },
           { icon: <FaGlobe />, label: "Customers Globally", value: 100 },
           { icon: <FaFlag />, label: "Countries Serving", value: 10 },
-          { icon: <FaCheckCircle />, label: "Successful Projects", value: 1000 },
+          
         ].map((item, i) => (
           <div key={i} className="flex flex-col items-center border-t-4 border-gray-300 pt-4">
             <div className="text-yellow-500 font-semibold flex items-center gap-2 mb-1 text-xl">

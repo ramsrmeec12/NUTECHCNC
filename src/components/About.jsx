@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
 
 const AboutUs = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  
   return (
     <div className="bg-white px-6 md:px-20 py-12">
       <div className="grid md:grid-cols-3 gap-8 items-start">
@@ -26,28 +27,19 @@ const AboutUs = () => {
           </button>
         </div>
 
-        {/* Right Side: Events + YouTube Video */}
-        <div className="space-y-6">
-          {/* Events Box */}
-          <div className="bg-gray-100 p-4 rounded-md shadow-sm">
-            <h3 className="text-xl font-semibold text-gray-800 mb-2">Upcoming Events</h3>
-            <p className="text-gray-500">There are no upcoming events.</p>
-          </div>
-
-          {/* YouTube Video Embed */}
-          <div className="aspect-w-16 aspect-h-9 rounded-md overflow-hidden shadow-md">
-            <iframe
-              width="560"
-              height="400"
-              src="https://www.youtube.com/embed/0DGTLtCmMXs?si=31th-D00zRc8xafu"
-              title="YouTube video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              referrerPolicy="strict-origin-when-cross-origin"
-              className="w-full md:h-40"
-            ></iframe>
-          </div>
+        {/* Right Side: YouTube Video Only */}
+        <div className="w-full h-[300px] rounded-md overflow-hidden shadow-md">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/0DGTLtCmMXs?si=31th-D00zRc8xafu"
+            title="YouTube video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            referrerPolicy="strict-origin-when-cross-origin"
+            className="w-full h-full"
+          ></iframe>
         </div>
       </div>
     </div>

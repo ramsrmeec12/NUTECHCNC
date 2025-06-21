@@ -15,7 +15,6 @@ function App() {
   return (<BrowserRouter>
   <ScrollToTop></ScrollToTop>
     <Routes>
-      
       <Route path="/" element={<Home></Home>}></Route>
       <Route path="/contact" element={<Contact></Contact>}></Route>
       <Route path="/aboutus" element={<AboutUsPage></AboutUsPage>}></Route>

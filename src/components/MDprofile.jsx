@@ -29,7 +29,7 @@ const ManagingDirectorProfile = () => {
             and Post Graduate Diploma in Business Administration.
           </p>
           <p className="mt-4 leading-relaxed text-[15px]">
-            With over <strong>35 years of experience</strong> in the industry, he has deep expertise in:
+            With over <strong>36 years of experience</strong> in the industry, he has deep expertise in:
             Plastics Engineering, Material Selection, New Product Development, 3D Printing, Precision Plastic Mould Manufacturing, 
             Injection Moulding, Blow Moulding, Thermoforming, Production & Planning, Intricate Machining, 
             Jigs, Fixtures, CNC Machining, and CAD/CAM processes.

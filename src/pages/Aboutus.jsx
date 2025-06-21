@@ -1,6 +1,6 @@
-import React from 'react';
 import Navbar2 from '../components/Navbar2';
 import AboutUs from '../components/About';
+import aboutus1 from '../assets/Aboutus/Aboutus1.jpg'
 
 const AboutUsPage = () => {
     return (
@@ -40,7 +40,7 @@ const AboutUsPage = () => {
                     {[
                         {
                             text: "Over the years, Nutech has grown its facilities...",
-                            img: "/images/chikkatirupati.jpg",
+                            img: aboutus1,
                             alt: "Chikkatirupati Unit",
                         },
                         {

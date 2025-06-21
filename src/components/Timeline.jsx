@@ -32,14 +32,22 @@ const approachSteps = [
   },
   {
     phase: 'Phase 4',
-    title: 'Tooling & Mould Fabrication',
+    title: 'Tooling & Mould Manufacturing',
     description:
       'Custom moulds and tools are manufactured using advanced machining processes to prepare for mass production.',
     estimate: 'Estimated time: 15 to 30 days',
     image: img4,
   },
-  {
+   {
     phase: 'Phase 5',
+    title: 'Trial & Validation',
+    description:
+      'We would get updates about quality and precesion on products from customers and do corrections if needed.',
+    estimate: 'Estimated time: 15 to 30 days',
+    image: img4,
+  },
+  {
+    phase: 'Phase 6',
     title: 'Mass Production & Quality Assurance',
     description:
       'Full-scale production begins with rigorous quality control, ensuring consistency, durability, and timely delivery.',
