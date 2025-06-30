@@ -1,4 +1,4 @@
-import React from 'react';
+
 import rajendiranPhoto from '../assets/ManagementTeam/ceo.jpeg'
 
 const ManagingDirectorProfile = () => {

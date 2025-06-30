@@ -1,5 +1,5 @@
 import Navbar2 from '../components/Navbar2';
-import AboutUs from '../components/About';
+
 import aboutus1 from '../assets/Aboutus/Aboutus1.jpg';
 import aboutus2 from '../assets/Aboutus/Aboutus2.jpg';
 import aboutus3 from '../assets/Aboutus/Aboutus3.jpg';

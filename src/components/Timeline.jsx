@@ -1,5 +1,4 @@
-import React from 'react';
-import logo from '../assets/navbarimg/LOGO.jpg'
+
 import img1 from '../assets/timeline/img1.jpg'
 import img2 from '../assets/timeline/img2.png'
 import img3 from '../assets/timeline/img3.webp'

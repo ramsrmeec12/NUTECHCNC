@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Navbar2 from './Navbar2';
-import Footer from './footer';
+
 
 const Contact = () => {
     const [name, setName] = useState('');

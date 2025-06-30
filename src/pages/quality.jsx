@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import iso9001 from '../assets/quality/quality1.jpg';
 import iso14001 from '../assets/quality/quality2.jpg';
 import iso45001 from '../assets/quality/quality3.jpg';

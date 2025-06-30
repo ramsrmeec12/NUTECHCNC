@@ -1,4 +1,4 @@
-import { useState,useEffect } from 'react';
+import { useState} from 'react';
 import Navbar2 from '../components/Navbar2';
 import { Helmet } from 'react-helmet';
 
