@@ -1,5 +1,6 @@
 import { useState,useEffect } from 'react';
 import Navbar2 from '../components/Navbar2';
+import { Helmet } from 'react-helmet';
 
 import Automobile1 from '../assets/products/Automobile/Automobile1.jpg';
 import Automobile2 from '../assets/products/Automobile/Automobile2.jpg';
@@ -336,85 +337,92 @@ const sectors = [
 ];
 
 const ProductListing = () => {
-    const [openIndex, setOpenIndex] = useState(null);
-    const [selectedImage, setSelectedImage] = useState(null);
+  const [openIndex, setOpenIndex] = useState(null);
+  const [selectedImage, setSelectedImage] = useState(null);
 
-    useEffect(() => {
-        document.title = "Plastic Product Sectors | Your Company Name"; // 🔁 Replace with actual brand name
-    }, []);
+  const handleImageClick = (img) => setSelectedImage(img);
+  const closeModal = () => setSelectedImage(null);
 
-    const handleImageClick = (img) => {
-        setSelectedImage(img);
-    };
+  return (
+    <div>
+      <Helmet>
+        <title>Plastic Products by Industry | Nutech CNC</title>
+        <meta
+          name="description"
+          content="Explore our vast range of plastic products for industries like automobiles, electronics, medical, footwear, FMCG, and more. Trusted by global clients."
+        />
+        <meta property="og:title" content="Plastic Products by Industry | Nutech CNC" />
+        <meta
+          property="og:description"
+          content="See how Nutech CNC supports multiple industries with high-performance plastic components — from automotive to medical and electronics."
+        />
+        <meta property="og:image" content="https://yourdomain.com/assets/og-products.jpg" />
+        <meta property="og:url" content="https://yourdomain.com/products" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="canonical" href="https://yourdomain.com/products" />
+      </Helmet>
 
-    const closeModal = () => {
-        setSelectedImage(null);
-    };
+      <Navbar2 />
+      <div className="bg-white px-6 py-12 max-w-6xl mx-auto pt-24">
+        <h2 className="text-3xl font-bold text-center mb-2">Our Plastic Product Sectors</h2>
+        <div className="border-t-4 border-yellow-500 w-24 mb-6 mx-auto"></div>
 
-    return (
-        <div>
-            <Navbar2 />
-            <div className="bg-white px-6 py-12 max-w-6xl mx-auto pt-24">
-                <h2 className="text-3xl font-bold text-center mb-2">Our Plastic Product Sectors</h2>
-               
-      <div className="border-t-4 border-yellow-500 w-24 mb-6 mx-auto"></div>
+        {sectors.map((sector, index) => (
+          <div key={index} className="mb-4 border border-gray-200 rounded-lg shadow">
+            <button
+              onClick={() => setOpenIndex(openIndex === index ? null : index)}
+              className="w-full flex justify-between items-center px-4 py-3 bg-gray-100 hover:bg-yellow-100 transition"
+            >
+              <span className="text-lg font-semibold">{sector.title}</span>
+              <span>{openIndex === index ? '▲' : '▼'}</span>
+            </button>
 
-                {sectors.map((sector, index) => (
-                    <div key={index} className="mb-4 border border-gray-200 rounded-lg shadow">
-                        <button
-                            onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                            className="w-full flex justify-between items-center px-4 py-3 bg-gray-100 hover:bg-yellow-100 transition"
-                        >
-                            <span className="text-lg font-semibold">{sector.title}</span>
-                            <span>{openIndex === index ? '▲' : '▼'}</span>
-                        </button>
-
-                        {openIndex === index && (
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-gray-50">
-                                {sector.images.length > 0 ? (
-                                    sector.images.map((img, i) => (
-                                        <img
-                                            key={i}
-                                            src={img}
-                                            alt={`${sector.title} ${i}`}
-                                            className="w-full h-40 object-cover rounded shadow cursor-pointer hover:scale-105 transition"
-                                            onClick={() => handleImageClick(img)}
-                                        />
-                                    ))
-                                ) : (
-                                    <p className="text-gray-500 italic col-span-full">No images available.</p>
-                                )}
-                            </div>
-                        )}
-                    </div>
-                ))}
-
-                {selectedImage && (
-                    <div
-                        className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
-                        onClick={closeModal}
-                    >
-                        <div
-                            className="relative"
-                            onClick={(e) => e.stopPropagation()}
-                        >
-                            <img
-                                src={selectedImage}
-                                alt="Expanded"
-                                className="max-w-[90vw] max-h-[90vh] rounded-lg shadow-xl"
-                            />
-                            <button
-                                className="absolute top-2 right-2 text-yellow-600 text-3xl font-bold"
-                                onClick={closeModal}
-                            >
-                                &times;
-                            </button>
-                        </div>
-                    </div>
+            {openIndex === index && (
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-gray-50">
+                {sector.images.length > 0 ? (
+                  sector.images.map((img, i) => (
+                    <img
+                      key={i}
+                      src={img}
+                      alt={`${sector.title} ${i + 1}`}
+                      className="w-full h-40 object-cover rounded shadow cursor-pointer hover:scale-105 transition"
+                      onClick={() => handleImageClick(img)}
+                    />
+                  ))
+                ) : (
+                  <p className="text-gray-500 italic col-span-full">No images available.</p>
                 )}
+              </div>
+            )}
+          </div>
+        ))}
+
+        {selectedImage && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50"
+            onClick={closeModal}
+          >
+            <div
+              className="relative"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={selectedImage}
+                alt="Expanded"
+                className="max-w-[90vw] max-h-[90vh] rounded-lg shadow-xl"
+              />
+              <button
+                className="absolute top-2 right-2 text-yellow-600 text-3xl font-bold"
+                onClick={closeModal}
+              >
+                &times;
+              </button>
             </div>
-        </div>
-    );
+          </div>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default ProductListing;
